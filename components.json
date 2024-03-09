@@ -74,7 +74,7 @@
     "description": "A flexible container for content with options for headers, footers, and various content sections.",
     "properties": {
       "children": {
-        "type": "node",
+        "type": "element",
         "description": "The content inside the card."
       },
       "className": {
@@ -310,7 +310,7 @@
         "description": "Validation rules for form fields to ensure data integrity."
       },
       "children": {
-        "type": "node",
+        "type": "element",
         "description": "Nested components or elements within the form, such as buttons, labels, or custom inputs like text, email, URL, textarea etc."
       }
     },
@@ -343,8 +343,8 @@
     "description": "A layout component that centers and constrains its content.",
     "properties": {
       "children": {
-        "type": "node",
-        "description": "The content to be placed inside the container."
+        "type": "element",
+        "description": "The content to be placed inside the container, which will consist of other elements defined in this file."
       },
       "className": {
         "type": "string",
@@ -433,7 +433,7 @@
     "description": "A component at the bottom of the page, often containing links and copyright information.",
     "properties": {
       "children": {
-        "type": "node",
+        "type": "element",
         "description": "The content to be placed inside the footer."
       },
       "className": {

@@ -1,0 +1,14 @@
+I am working on a project where I need to create various user interface components based on a components.json file.
+This file defines the properties of various components like 'button', 'input', 'form', 'container', 'image', 'text',
+and others. The components are already very visually appealing, but it's your job that they also appear in a good way,
+meaning, that they should harmonise on the screen and be well put together (horizontally, vertically grouped, etc).
+Make good use of the container element. The components should be structured in a
+way that makes sense for the user interface, with appropriate spacing and arrangement. Please provide a JSON
+structure for these components, adhering to the structure and properties defined in the components.json file. The
+JSON structure should include the necessary properties for each component as defined in the components.json file.
+The 'className' properties should be filled with class names based on Tailwind CSS for custom styling. Do not
+introduce new elements or properties that are not defined in the components.json file. Stick to the components and
+properties defined in this file to ensure consistency and compatibility with the rest of the project. This is important
+as the returned JSON will be used to generate UI on the frontend from a static function. Also, it is good to know that
+most of these components are based off of shadcn and tailwindcss, and the JSON will be turned into React code
+dynamically. It is absolutely critical that only the JSON is returned in the response, and no other data is included.
