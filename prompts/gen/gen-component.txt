@@ -1,0 +1,30 @@
+I'm developing a way to generate UI on the fly with shadcn components from natural language. However, for this I need to have a dataset of some of the core components from shadcn to begin with. I need them to follow a certain pattern, like:
+```
+  "button": {
+    "id": "button",
+    "description": "Displays a button or a component that looks like a button, with various styles such as primary, secondary, destructive, outline, ghost, link, and options for icons and loading states.",
+    "properties": {
+      "variant": {
+        "type": "string",
+        "description": "Defines the button's style variant."
+      },
+      "disabled": {
+        "type": "boolean",
+        "description": "Indicates if the button is disabled."
+      },
+      "loading": {
+        "type": "boolean",
+        "description": "Displays a loading indicator on the button, disabling interaction."
+      },
+      "children": {
+        "type": "string",
+        "description": "The text or elements to display inside the button."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name for custom styling."
+      }
+    }
+  },
+```
+This will be part of the components.json file that the agent will then be able to use for generating the UI from natural language. I will need you to generate these based off of what is described from a certain component page. I currently only want the 20% that gives 80% of the output - essentially, I want the least data that gives most of the output and covers most of the use cases. Could you please do so now for this url: https://ui.shadcn.com/docs/components/calendar

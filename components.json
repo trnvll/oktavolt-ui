@@ -1,0 +1,445 @@
+{
+  "button": {
+    "id": "button",
+    "description": "Displays a button or a component that looks like a button, with various styles such as primary, secondary, destructive, outline, ghost, link, and options for icons and loading states.",
+    "properties": {
+      "variant": {
+        "type": "string",
+        "description": "Defines the button's style variant."
+      },
+      "disabled": {
+        "type": "boolean",
+        "description": "Indicates if the button is disabled."
+      },
+      "loading": {
+        "type": "boolean",
+        "description": "Displays a loading indicator on the button, disabling interaction."
+      },
+      "children": {
+        "type": "string",
+        "description": "The text or elements to display inside the button."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name for custom styling."
+      }
+    }
+  },
+  "calendar": {
+    "id": "calendar",
+    "description": "A date field component that allows users to enter and edit a date. It is built on top of React DayPicker.",
+    "properties": {
+      "mode": {
+        "type": "string",
+        "description": "The selection mode of the calendar, e.g., 'single' for single date selection."
+      },
+      "selected": {
+        "type": "Date | undefined",
+        "description": "The currently selected date."
+      },
+      "onSelect": {
+        "type": "function",
+        "description": "Function to handle date selection changes."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name to apply to the calendar for custom styling."
+      }
+    }
+  },
+  "avatar": {
+    "id": "avatar",
+    "description": "An element used to represent a user with an image and a fallback option if the image fails to load.",
+    "properties": {
+      "src": {
+        "type": "string",
+        "description": "The source URL of the image."
+      },
+      "alt": {
+        "type": "string",
+        "description": "Alternative text describing the image."
+      },
+      "fallback": {
+        "type": "string",
+        "description": "Text to display when the image cannot be loaded."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name for custom styling."
+      }
+    }
+  },
+  "card": {
+    "id": "card",
+    "description": "A flexible container for content with options for headers, footers, and various content sections.",
+    "properties": {
+      "children": {
+        "type": "node",
+        "description": "The content inside the card."
+      },
+      "className": {
+        "type": "string",
+        "description": "Custom class for styling."
+      }
+    }
+  },
+  "checkbox": {
+    "id": "checkbox",
+    "description": "A component that represents a checkbox, allowing users to select a single or multiple options.",
+    "properties": {
+      "checked": {
+        "type": "boolean",
+        "description": "Determines if the checkbox is selected."
+      },
+      "onChange": {
+        "type": "function",
+        "description": "Callback function triggered when the checkbox state changes."
+      }
+    }
+  },
+  "combobox": {
+    "id": "combobox",
+    "description": "A component that combines input and dropdown list, enabling users to select an option from a predefined list or enter a custom value.",
+    "properties": {
+      "items": {
+        "type": "array",
+        "description": "An array of options that the user can select from."
+      },
+      "selectedItem": {
+        "type": "object",
+        "description": "The currently selected item."
+      },
+      "onChange": {
+        "type": "function",
+        "description": "Function called when the selected item changes."
+      },
+      "className": {
+        "type": "string",
+        "description": "Custom class for styling."
+      }
+    }
+  },
+  "drawer": {
+    "id": "drawer",
+    "description": "A component that slides in from the side, used for navigation links or additional options. It can act as a dialog on desktop and transform into a drawer on mobile, providing versatile use across devices.",
+    "properties": {
+      "open": {
+        "type": "boolean",
+        "description": "Controls the visibility of the drawer."
+      },
+      "position": {
+        "type": "string",
+        "description": "Determines the side from which the drawer will appear."
+      },
+      "size": {
+        "type": "string",
+        "description": "Defines the size of the drawer."
+      },
+      "className": {
+        "type": "string",
+        "description": "Custom class for styling."
+      }
+    }
+  },
+  "input": {
+    "id": "input",
+    "description": "Renders a form input field or a component that resembles an input field, supporting various types like text, file, and disabled states. It can also be used with labels or integrated into forms.",
+    "properties": {
+      "type": {
+        "type": "string",
+        "description": "Defines the type of input, such as text, password, or file."
+      },
+      "disabled": {
+        "type": "boolean",
+        "description": "Indicates if the input field is disabled."
+      },
+      "placeholder": {
+        "type": "string",
+        "description": "Provides a placeholder text inside the input field."
+      },
+      "value": {
+        "type": "string",
+        "description": "Sets the input field's value."
+      },
+      "onChange": {
+        "type": "function",
+        "description": "Callback function that is called when the input's value changes."
+      },
+      "className": {
+        "type": "string",
+        "description": "Custom class for styling."
+      }
+    }
+  },
+  "dataTable": {
+    "id": "dataTable",
+    "description": "A complex component for displaying and managing data in a tabular format. Supports features such as pagination, sorting, filtering, visibility control, and row selection.",
+    "properties": {
+      "columns": {
+        "type": "array",
+        "description": "Defines the columns of the table, including headers and data accessor keys."
+      },
+      "data": {
+        "type": "array",
+        "description": "The data to be displayed in the table."
+      },
+      "pagination": {
+        "type": "object",
+        "description": "Controls for pagination, including current page and page size."
+      },
+      "sorting": {
+        "type": "object",
+        "description": "Settings for sorting data by column."
+      },
+      "filtering": {
+        "type": "object",
+        "description": "Options for filtering data displayed in the table."
+      },
+      "visibility": {
+        "type": "object",
+        "description": "Controls the visibility of columns in the table."
+      },
+      "selection": {
+        "type": "object",
+        "description": "Enables row selection within the table."
+      },
+      "className": {
+        "type": "string",
+        "description": "Custom class for styling."
+      }
+    },
+    "deps": {
+      "onRowSelect": {
+        "description": "Callback function triggered when a row is selected."
+      },
+      "onSortChange": {
+        "description": "Callback function triggered when sorting preferences change."
+      },
+      "onFilterChange": {
+        "description": "Callback function triggered when filter settings change."
+      },
+      "onPageChange": {
+        "description": "Callback function triggered when the current page changes."
+      }
+    }
+  },
+  "select": {
+    "id": "select",
+    "description": "A dropdown selection component allowing users to choose one option from a list. Triggered by a button, it supports selecting a single option from given choices.",
+    "properties": {
+      "placeholder": {
+        "type": "string",
+        "description": "Text displayed when no option is selected."
+      },
+      "options": {
+        "type": "array",
+        "description": "List of options that the user can select from."
+      },
+      "value": {
+        "type": "string",
+        "description": "Currently selected option's value."
+      },
+      "disabled": {
+        "type": "boolean",
+        "description": "Indicates whether the select component is disabled."
+      },
+      "className": {
+        "type": "string",
+        "description": "Custom class for styling."
+      }
+    },
+    "deps": {
+      "onChange": {
+        "type": "function",
+        "description": "Callback function triggered when the selected option changes."
+      }
+    }
+  },
+  "switch": {
+    "id": "switch",
+    "description": "A toggle control for switching between two states, such as on/off or checked/unchecked. Typically used for settings that affect the current state or mode of an application or page.",
+    "properties": {
+      "checked": {
+        "type": "boolean",
+        "description": "Determines whether the switch is in the 'on' or 'checked' state."
+      },
+      "disabled": {
+        "type": "boolean",
+        "description": "If true, the switch will be disabled and cannot be interacted with."
+      }
+    },
+    "deps": {
+      "onChange": {
+        "description": "Callback function triggered when the switch's state changes."
+      }
+    }
+  },
+  "textarea": {
+    "id": "textarea",
+    "description": "A component for inputting multi-line text, resembling a form textarea. It supports various states such as default, disabled, and with labels or buttons for additional interaction.",
+    "properties": {
+      "disabled": {
+        "type": "boolean",
+        "description": "Disables the textarea, preventing user interaction."
+      },
+      "placeholder": {
+        "type": "string",
+        "description": "Provides guidance to the user about what should be entered in the textarea."
+      },
+      "value": {
+        "type": "string",
+        "description": "The inputted text value of the textarea."
+      }
+    },
+    "deps": {
+      "onChange": {
+        "description": "Function called when the value of the textarea changes."
+      }
+    }
+  },
+  "form": {
+    "id": "form",
+    "description": "A container for user input for submitting information, supporting various input types, validation, and the inclusion of nested components.",
+    "properties": {
+      "onSubmit": {
+        "type": "function",
+        "description": "Function called when the form is submitted."
+      },
+      "validation": {
+        "type": "object",
+        "description": "Validation rules for form fields to ensure data integrity."
+      },
+      "children": {
+        "type": "node",
+        "description": "Nested components or elements within the form, such as buttons, labels, or custom inputs like text, email, URL, textarea etc."
+      }
+    },
+    "deps": {
+      "formData": {
+        "description": "Object representing entered data, passed to onSubmit."
+      }
+    }
+  },
+  "typography": {
+    "id": "typography",
+    "description": "Enables the application of predefined text styles for consistency and readability throughout the UI. It supports various text elements like headings, paragraphs, and blockquotes.",
+    "properties": {
+      "variant": {
+        "type": "string",
+        "description": "Selects one of the predefined typography variants such as h1, h2, h3, p, blockquote, etc., ensuring design consistency."
+      },
+      "className": {
+        "type": "string",
+        "description": "Applies Tailwind CSS classes for additional custom styling beyond the selected variant."
+      },
+      "children": {
+        "type": "string",
+        "description": "The text content to be styled according to the selected variant."
+      }
+    }
+  },
+  "container": {
+    "id": "container",
+    "description": "A layout component that centers and constrains its content.",
+    "properties": {
+      "children": {
+        "type": "node",
+        "description": "The content to be placed inside the container."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name for custom styling."
+      }
+    }
+  },
+  "image": {
+    "id": "image",
+    "description": "A component to display images.",
+    "properties": {
+      "src": {
+        "type": "string",
+        "description": "The source URL of the image."
+      },
+      "alt": {
+        "type": "string",
+        "description": "Alternative text describing the image."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name for custom styling."
+      }
+    }
+  },
+  "heroSection": {
+    "id": "heroSection",
+    "description": "A large, attention-grabbing section typically placed at the top of the page.",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "The title text of the hero section."
+      },
+      "subtitle": {
+        "type": "string",
+        "description": "The subtitle text of the hero section."
+      },
+      "image": {
+        "type": "string",
+        "description": "The background image of the hero section."
+      },
+      "cta": {
+        "type": "string",
+        "description": "The call to action button text."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name for custom styling."
+      }
+    }
+  },
+  "text": {
+    "id": "text",
+    "description": "A component to display text content.",
+    "properties": {
+      "content": {
+        "type": "string",
+        "description": "The text content to display."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name for custom styling."
+      }
+    }
+  },
+  "cta": {
+    "id": "cta",
+    "description": "A component, often a button, that prompts the user to take some action.",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "The text of the call to action."
+      },
+      "onClick": {
+        "type": "function",
+        "description": "Function to call when the CTA is clicked."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name for custom styling."
+      }
+    }
+  },
+  "footer": {
+    "id": "footer",
+    "description": "A component at the bottom of the page, often containing links and copyright information.",
+    "properties": {
+      "children": {
+        "type": "node",
+        "description": "The content to be placed inside the footer."
+      },
+      "className": {
+        "type": "string",
+        "description": "The class name for custom styling."
+      }
+    }
+  }
+}
