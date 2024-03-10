@@ -1,0 +1,28 @@
+{
+  "name": "image",
+  "description": "Displays an image with the ability to customize its appearance via Tailwind CSS classnames.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "__parent__": {
+        "type": "string",
+        "description": "The internal logical ID of the parent element. This is critical to have for structure and know how elements relate to each other in HTML. Only the root element should be undefined."
+      },
+      "src": {
+        "type": "string",
+        "description": "The source URL of the image."
+      },
+      "alt": {
+        "type": "string",
+        "description": "The alternative text that describes the image."
+      },
+      "className": {
+        "type": "string",
+        "description": "The Tailwind CSS classnames for custom styling. Mostly only to be used for sizing, spacing or placement in conjunction with other elements."
+      }
+    },
+    "required": [
+      "src"
+    ]
+  }
+}

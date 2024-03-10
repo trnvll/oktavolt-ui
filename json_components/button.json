@@ -1,12 +1,13 @@
-I'm developing a way to generate UI on the fly with shadcn components from natural language. However, for this I need to have a dataset of some of the core components from my code base to begin with. I need them to follow a certain pattern (for OpenAI function calling), like:
-```
-// button.json
 {
   "name": "button",
   "description": "Displays a button or a component that looks like a button.",
   "parameters": {
     "type": "object",
     "properties": {
+      "__parent__": {
+        "type": "string",
+        "description": "The internal logical ID of the parent element. This is critical to have for structure and know how elements relate to each other in HTML. Only the root element should be undefined."
+      },
       "variant": {
         "type": "string",
         "enum": [
@@ -34,5 +35,3 @@ I'm developing a way to generate UI on the fly with shadcn components from natur
     ]
   }
 }
-```
-This will be part of the defined functions for the OpenAI agent that will then be able to use it for generating the UI from natural language. I will need you to generate these based off of what is described from a certain component page. Could you please generate a new json file to a "container" component? It is meant to make it easier to group individual elements together, how it is working typically, basically just a div, that can then be heavily customised via tailwind classnames.

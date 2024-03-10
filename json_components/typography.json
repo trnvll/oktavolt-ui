@@ -1,0 +1,38 @@
+{
+  "name": "typography",
+  "description": "Displays text with the ability to customize its appearance via predefined styles.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "__parent__": {
+        "type": "string",
+        "description": "The internal logical ID of the parent element. This is critical to have for structure and know how elements relate to each other in HTML. Only the root element should be undefined."
+      },
+      "variant": {
+        "type": "string",
+        "enum": [
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "text-lg",
+          "text-md",
+          "text-sm"
+        ],
+        "description": "The style variant of the text. This follows a set of predefined styles."
+      },
+      "children": {
+        "type": "string",
+        "description": "The text to display."
+      },
+      "className": {
+        "type": "string",
+        "description": "The Tailwind CSS classnames for custom styling. Mostly only to be used for spacing or placement in conjunction with other elements."
+      }
+    },
+    "required": [
+      "variant",
+      "children"
+    ]
+  }
+}

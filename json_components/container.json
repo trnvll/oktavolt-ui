@@ -1,0 +1,24 @@
+{
+  "name": "container",
+  "description": "A container component that groups individual elements together. It is essentially a div that can be heavily customized via Tailwind CSS classnames.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "__parent__": {
+        "type": "string",
+        "description": "The internal logical ID of the parent element. This is critical to have for structure and know how elements relate to each other in HTML. Only the root element should be undefined."
+      },
+      "children": {
+        "type": "element",
+        "description": "The elements to display inside the container."
+      },
+      "className": {
+        "type": "string",
+        "description": "The Tailwind CSS classnames for custom styling. Mostly only to be used for spacing or placement in conjunction with other elements."
+      }
+    },
+    "required": [
+      "children"
+    ]
+  }
+}
